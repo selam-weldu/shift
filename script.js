@@ -6,3 +6,6 @@ const btnStart = document.querySelector('.startButton');
 
 btnStart.addEventListener('click', startGame);
 document.addEventListener('keydown', pressKeyOn);
+document.addEventListener('keyup', pressKeyOff);
+
+let animationGame;
