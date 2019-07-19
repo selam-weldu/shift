@@ -6,21 +6,22 @@ const btnStart = document.querySelector('.btnStart');
 btnStart.addEventListener('click', startGame);
 document.addEventListener('keydown', pressKeyOn);
 document.addEventListener('keyup', pressKeyOff);
-//Game Variables
+
+
 let animationGame;
 let gamePlay = false;
 let player;
 let keys = {
-    ArrowUp: false
-    , ArrowDown: false
-    , ArrowLeft: false
-    , ArrowRight: false
+    ArrowUp: false,
+    ArrowDown: false,
+    ArrowLeft: false,
+    ArrowRight: false
 }
 
 function startGame() {
     console.log(gamePlay);
     btnStart.style.display = 'none';
-    var div = document.createElement('div');
+    let div = document.createElement('div');
     div.setAttribute('class', 'playerCar');
     div.x = 250;
     div.y = 500;
@@ -29,12 +30,12 @@ function startGame() {
     animationGame = requestAnimationFrame(playGame);
     player = {
         ele: div,
-        speed: 9
-        , lives: 3
-        , gameScore: 0
-        , carstoPass: 10
-        , score: 0
-        , roadwidth: 250
+        speed: 9,
+        lives: 3,
+        gameScore: 0,
+        carstoPass: 10,
+        score: 0,
+        roadwidth: 250
     }
     startBoard();
 }
@@ -89,8 +90,8 @@ function playGame() {
         }
 
         ///move car
-        player.ele.style.top = player.ele.y + 'px';
-        player.ele.style.left = player.ele.x + 'px';
+        // player.ele.style.top = player.ele.y + 'px';
+        // player.ele.style.left = player.ele.x + 'px';
     }
     animationGame = requestAnimationFrame(playGame);
 }
