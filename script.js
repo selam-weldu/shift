@@ -9,6 +9,7 @@ document.addEventListener('keydown', pressKeyOn);
 document.addEventListener('keyup', pressKeyOff);
 
 let animationGame;
+
 let gamePlay = false;
 let player;
 let keys = {
