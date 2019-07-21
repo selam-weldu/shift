@@ -1,6 +1,6 @@
 # Shift
 
-Shift is a single player car racing game, where the user can race under limited time. 
+Shift is a single player racing game, where the player has to pass a certain number of cars to move on to the next level. 
 
 
 # Technologies
