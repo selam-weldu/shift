@@ -18,7 +18,6 @@ let keys = {
     , ArrowRight: false
 }
 function startGame() {
-    //console.log(gamePlay);
     container.innerHTML = ' ';
     btnStart.style.display = 'none';
     var div = document.createElement('div');
@@ -39,15 +38,15 @@ function startGame() {
         , gameEndCounter: 0
     }
     startBoard();
-    setupBadGuys(10);
+    setupBadGuys(6);
 }
 function setupBadGuys(num) {
     for (let x = 0; x < num; x++) {
-        // let temp = 'badGuy' + (x + 1);
+        let temp = 'badGuy' + (x + 1);
         let div = document.createElement('div');
-        div.innerHTML = (x + 1);
+        // div.innerHTML = (x + 1);
         div.setAttribute('class', 'baddy');
-        // div.setAttribute('id', temp);
+        div.setAttribute('id', temp);
         makeBad(div);
         container.appendChild(div);
     }
