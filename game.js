@@ -118,7 +118,8 @@ function playGame() {
             player.ele.x -= (player.speed / 4);
         }
         ///move car
-      
+        player.ele.style.top = player.ele.y + 'px';
+        player.ele.style.left = player.ele.x + 'px';
     }
     animationGame = requestAnimationFrame(playGame);
 }
