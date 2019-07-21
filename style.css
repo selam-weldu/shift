@@ -3,7 +3,9 @@
     height: 600px;
     width:800px;
     left:5%;
-    background-color:green;
+    /* background-color:green; */
+    background-image: url(https://i.pinimg.com/originals/3c/71/0e/3c710eb29f3e5a0f65207d8252ff4bb7.png);
+    background-size: cover;
     overflow: hidden;
 }
 .dashboard{

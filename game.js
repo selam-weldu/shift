@@ -42,11 +42,11 @@ function startGame() {
 }
 function setupBadGuys(num) {
     for (let x = 0; x < num; x++) {
-        let temp = 'badGuy' + (x + 1);
+        // let temp = 'badGuy' + (x + 1);
         let div = document.createElement('div');
         div.innerHTML = (x + 1);
         div.setAttribute('class', 'baddy');
-        div.setAttribute('id', temp);
+        // div.setAttribute('id', temp);
         makeBad(div);
         container.appendChild(div);
     }
@@ -58,11 +58,13 @@ function randomColor() {
     }
     return '#' + c() + c() + c();
 }
+
 function makeBad(e) {
     let tempRoad = document.querySelector('.road');
     e.style.left = tempRoad.offsetLeft + Math.ceil(Math.random() * tempRoad.offsetWidth) - 30 + 'px';
     e.style.top = Math.ceil(Math.random() * -400) + 'px';
     e.speed = Math.ceil(Math.random() * 17) + 2;
+    // e.style.backgroundColor = #af0000 ;
     e.style.backgroundColor = randomColor();
 }
 function startBoard() {
