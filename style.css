@@ -27,7 +27,6 @@
     border-radius: 25px;
     padding:5px;
 }
-
 .road{
  position: absolute;height: 50px;
     width: 250px;
@@ -49,7 +48,6 @@
     left:50%;
     position: absolute;
 }
-
 .baddy {
     position: absolute;
     height: 80px;
@@ -74,4 +72,3 @@
     background-size: cover;
     z-index: 100;
 }
-
