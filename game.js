@@ -6,7 +6,8 @@ const btnStart = document.querySelector('.btnStart');
 btnStart.addEventListener('click', startGame);
 document.addEventListener('keydown', pressKeyOn);
 document.addEventListener('keyup', pressKeyOff);
-//Game Variables
+
+
 let animationGame;
 let gamePlay = false;
 let player;
@@ -64,7 +65,6 @@ function makeBad(e) {
     e.style.left = tempRoad.offsetLeft + Math.ceil(Math.random() * tempRoad.offsetWidth) - 30 + 'px';
     e.style.top = Math.ceil(Math.random() * -400) + 'px';
     e.speed = Math.ceil(Math.random() * 17) + 2;
-    // e.style.backgroundColor = #af0000 ;
     e.style.backgroundColor = randomColor();
 }
 function startBoard() {
@@ -79,23 +79,19 @@ function startBoard() {
 }
 function pressKeyOn(event) {
     event.preventDefault();
-    ////console.log(keys);
     keys[event.key] = true;
 }
 function pressKeyOff(event) {
     event.preventDefault();
-    //console.log(keys);
     keys[event.key] = false;
 }
 function updateDash() {
-    ////console.log(player);  
     scoreDash.innerHTML = player.score;
     lifeDash.innerHTML = player.lives;
     speedDash.innerHTML = Math.round(player.speed * 13);
 }
 function moveRoad() {
     let tempRoad = document.querySelectorAll('.road');
-    ////console.log(tempRoad);
     let previousRoad = tempRoad[0].offsetLeft;
     let previousWidth = tempRoad[0].offsetWidth;
     const pSpeed = Math.floor(player.speed);
@@ -124,7 +120,6 @@ function moveRoad() {
 function isCollide(a, b) {
     let aRect = a.getBoundingClientRect();
     let bRect = b.getBoundingClientRect();
-    ////console.log(aRect);
     return !(
         (aRect.bottom < bRect.top) || (aRect.top > bRect.bottom) || (aRect.right < bRect.left) || (aRect.left > bRect.right))
 }
@@ -153,7 +148,6 @@ function moveBadGuys() {
         else {
             tempBaddy[i].style.top = y + 'px';
             let hitCar = isCollide(tempBaddy[i], player.ele);
-            //console.log(hitCar);
             if (hitCar) {
                 player.speed = 0;
                 player.lives--;
@@ -183,7 +177,7 @@ function playGame() {
         ///Movement
         let roadPara = moveRoad();
         moveBadGuys();
-        ////console.log(roadPara);
+ 
         if (keys.ArrowUp) {
             if (player.ele.y > 400) player.ele.y -= 1;
             player.speed = player.speed < 20 ? (player.speed + 0.05) : 20;
@@ -206,7 +200,6 @@ function playGame() {
                 player.ele.y += +1;
             }
             player.speed = player.speed > 0 ? (player.speed - 0.2) : 1;
-            //console.log('OFF ROAD');
         }
         ///move car
         player.ele.style.top = player.ele.y + 'px';
