@@ -41,7 +41,7 @@ function startGame() {
         , gameEndCounter: 0
     }
     startBoard();
-    setupBadGuys(10);
+    setupBadGuys(6);
 }
 function setupBadGuys(num) {
     for (let x = 0; x < num; x++) {
