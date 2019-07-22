@@ -1,6 +1,7 @@
 const speedDash = document.querySelector('.speedDash');
 const scoreDash = document.querySelector('.scoreDash');
 const lifeDash = document.querySelector('.lifeDash');
+const carsToPass = document.querySelector('.carsToPass');
 const container = document.getElementById('container');
 const btnStart = document.querySelector('.btnStart');
 btnStart.addEventListener('click', startGame);
@@ -32,7 +33,7 @@ function startGame() {
         , speed: 0
         , lives: 3
         , gameScore: 0
-        , carstoPass: 1
+        , carstoPass: 5
         , score: 0
         , roadwidth: 250
         , gameEndCounter: 0
@@ -44,7 +45,7 @@ function setupBadGuys(num) {
     for (let x = 0; x < num; x++) {
         let temp = 'badGuy' + (x + 1);
         let div = document.createElement('div');
-        div.innerHTML = (x + 1);
+        // div.innerHTML = (x + 1);
         div.setAttribute('class', 'baddy');
         div.setAttribute('id', temp);
         makeBad(div);
@@ -89,6 +90,7 @@ function updateDash() {
     ////console.log(player);  
     scoreDash.innerHTML = player.score;
     lifeDash.innerHTML = player.lives;
+    carsToPass.innerHTML = player.carstoPass;
     speedDash.innerHTML = Math.round(player.speed * 13);
 }
 function moveRoad() {
@@ -142,6 +144,7 @@ function moveBadGuys() {
             //reset car
             if (y > 2000) {
                 player.score++;
+                // player.carstoPass--;
                 if (player.score > player.carstoPass) {
                     gameOverPlay();
                 }
