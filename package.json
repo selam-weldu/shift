@@ -1,0 +1,19 @@
+{
+  "name": "shift",
+  "version": "1.0.0",
+  "description": "Shift is a single player racing game, where the player has to pass a certain number of cars to move on to the next level.",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/welduselam/shift.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/welduselam/shift/issues"
+  },
+  "homepage": "https://github.com/welduselam/shift#readme"
+}
