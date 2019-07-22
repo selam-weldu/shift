@@ -89,8 +89,10 @@
     bottom:60px;
     left:250px;
     border-radius: 5px;
+    /* background-image: url(https://library.kissclipart.com/20180830/bcq/kissclipart-audi-car-top-view-png-clipart-audi-a3-car-ab4eb576138e96ae.jpg); */
     background-image: url(car1.png);
     background-size: cover;
+    /* background-color: yellow; */
     z-index: 100;
 }
 
